@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --main-color: rgb(25, 121, 217);
+}
+
+button {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 10px;
+}

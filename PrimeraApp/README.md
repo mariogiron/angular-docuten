@@ -1,59 +1,35 @@
-# PrimeraApp
+# Ejercicio 
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.2.
+- Componente Contador
 
-## Development server
+```
+ng generate component components/Contador --skip-tests
 
-To start a local development server, run:
-
-```bash
-ng serve
+<app-contador [inicio]="20"></app-contador>
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Muestre un número y que podamos modificar ese número a partir de un botón incrementar y un botón decrementar
+    - ¿Propiedades o signals para el valor del número a modificar?
+    - ¿Cómo capturo los eventos de los diferentes botones?
+    - ¿Cómo le puedo pasar un INPUT desde el padre para poder modificar el valor inicial?
 
-## Code scaffolding
+- Variables CSS
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+# Ejercicio Tareas Simple
 
-```bash
-ng generate component component-name
+```html
+<app-formulario (tareaCreada)=""></app-formulario>
+<app-lista-tareas [tareas]="ARRAY CON TAREAS"></app-lista-tareas>
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Lista de tareas
 
-```bash
-ng generate --help
-```
+- Recibe un array con las tareas -> input
+- Muestra dichas tareas
+    - Se puede mostrar ejecutando una función -> Transformar el array a string
+    - Investigar control-flow
 
-## Building
+## Formulario
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Recuperar el valor del campo de texto y enviarlo al padre -> output
+- Emito el valor del campo de texto cuando pulse el botón -> evento click
